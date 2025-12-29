@@ -1,0 +1,13 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Streamlit uploads (runtime files)
+temp_uploads/
+
+# Generated outputs
+*.csv
+
+# OS files
+.DS_Store
+
