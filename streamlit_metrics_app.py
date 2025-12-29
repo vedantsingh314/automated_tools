@@ -71,12 +71,13 @@ st.title("📊 Software Quality Analysis Dashboard")
 st.caption("Static analysis of Python source code")
 
 st.info(
-    "This tool analyzes uploaded Python source code using standard "
-    "software engineering metrics. Files are processed temporarily and not stored."
-    "Project created by \n" 
-    "VEDANT SINGH(23/SE/169)\n"
-    "YASH JAIN(23/SE/177)"
+    "This tool analyzes uploaded Python source code using standard software engineering metrics. "
+    "Files are processed temporarily and are not stored.\n\n"
+    "Project Contributors:\n"
+    "• Vedant Singh (23/SE/169)\n"
+    "• Yash Jain (23/SE/177)"
 )
+
 # ---------------- ANALYSIS ----------------
 if analyze_btn and uploaded_files:
     shutil.rmtree(UPLOAD_DIR)
