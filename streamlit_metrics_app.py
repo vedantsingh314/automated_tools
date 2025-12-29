@@ -73,9 +73,10 @@ st.caption("Static analysis of Python source code")
 st.info(
     "This tool analyzes uploaded Python source code using standard "
     "software engineering metrics. Files are processed temporarily and not stored."
+    "Project created by " 
+    "VEDANT SINGH(23/SE/169)"
+    "YASH JAIN(23/SE/177)"
 )
-
-
 # ---------------- ANALYSIS ----------------
 if analyze_btn and uploaded_files:
     shutil.rmtree(UPLOAD_DIR)
