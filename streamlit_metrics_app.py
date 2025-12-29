@@ -73,8 +73,8 @@ st.caption("Static analysis of Python source code")
 st.info(
     "This tool analyzes uploaded Python source code using standard "
     "software engineering metrics. Files are processed temporarily and not stored."
-    "Project created by " 
-    "VEDANT SINGH(23/SE/169)"
+    "Project created by \n" 
+    "VEDANT SINGH(23/SE/169)\n"
     "YASH JAIN(23/SE/177)"
 )
 # ---------------- ANALYSIS ----------------
