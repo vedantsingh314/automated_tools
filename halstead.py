@@ -13,22 +13,31 @@ def halstead_metrics(file_path):
             elif tok.type in (tokenize.NAME, tokenize.NUMBER, tokenize.STRING):
                 operands[tok.string] += 1
 
-    n1 = len(operators)
-    n2 = len(operands)
-    N1 = sum(operators.values())
-    N2 = sum(operands.values())
+    # Distinct counts
+    n1 = len(operators)          # distinct operators
+    n2 = len(operands)           # distinct operands
+
+    # Total counts
+    N1 = sum(operators.values()) # total operators
+    N2 = sum(operands.values())  # total operands
 
     vocabulary = n1 + n2
-    length = N1 + N2
+    program_length = N1 + N2
 
-    volume = length * math.log2(vocabulary) if vocabulary > 0 else 0
+    volume = program_length * math.log2(vocabulary) if vocabulary > 0 else 0
     difficulty = (n1 / 2) * (N2 / n2) if n2 > 0 else 0
     effort = volume * difficulty
     bugs = volume / 3000 if volume > 0 else 0
 
     return {
-        "Halstead Volume": round(volume, 2),
-        "Halstead Difficulty": round(difficulty, 2),
-        "Halstead Effort": round(effort, 2),
+        "n1": n1,
+        "n2": n2,
+        "N1": N1,
+        "N2": N2,
+        "Vocabulary": vocabulary,
+        "ProgramLength": program_length,
+        "Volume": round(volume, 2),
+        "Difficulty": round(difficulty, 2),
+        "Effort": round(effort, 2),
         "Estimated Bugs": round(bugs, 3)
     }
